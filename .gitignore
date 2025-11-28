@@ -4,7 +4,6 @@ __pycache__
 *.gif
 .nfs*
 wandb/
-*npz
 *pb
 dataset/
 R/
