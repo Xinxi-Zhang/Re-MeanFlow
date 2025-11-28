@@ -1,0 +1,10 @@
+__pycache__
+*.pt
+*.pyc
+*.gif
+.nfs*
+wandb/
+*npz
+*pb
+dataset/
+R/
