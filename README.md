@@ -17,7 +17,7 @@ via Meanflow on Rectified Trajectories
   <sup>*</sup>Equal contribution &emsp; <br>
 </div>
 
-<h3 align="center">[<a href="http://arxiv.org/abs/todo">arXiv</a>]</h3>
+<h3 align="center">[<a href="https://arxiv.org/abs/2511.23342">arXiv</a>]</h3>
 <br>
 
 <div align="center">
