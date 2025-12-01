@@ -100,7 +100,7 @@ This Process should only take 1 or 2 minutes.
 As described in the paper, we train Re-MeanFlow on rectified trajectories in two stages: the first stage uses classifier-free guidance (CFG), and the second stage removes CFG to stabilize training. Since Re-MeanFlow is an efficient one-step model with cheap evaluation, we compute FID on the fly during training (we also provide the corresponding FID statistics).
 ```bash
 accelerate launch --multi_gpu --num_processes 8 --mixed_precision bf16 --gpu_ids 0,1,2,3,4,5,6,7 --main_process_port 9527 train.py \
-        --model edm2-img512-s-autog-fid \
+        --model edm2-img512-s-autog-fid \ # change it to "edm2-img64-s-autog-fid" for 64x64
         --exp_name remeanflow512\
         --exp_group REMF_512 \
         --results_dir R/512 \
