@@ -132,8 +132,15 @@ This code is mainly built upon [DiT](https://github.com/facebookresearch/DiT), [
 We thank [Haizhou Shi](https://haizhou-shi.github.io/) for many discussions that helped refining this work. We also thank [Charles Hedrick](https://www.cs.rutgers.edu/people/staff/details/charles-hedrick), [Hanz Makmur](https://www.cs.rutgers.edu/people/staff/details/hanz-makmur), and [Timothy Hayes](https://www.cs.rutgers.edu/people/staff/details/timothy-hayes) supporting our computing servers. 
 
 
-<!-- ## BibTeX
+## BibTeX
 ```bibtex
-@
+@misc{zhang2025flowstraighterfasterefficient,
+      title={Flow Straighter and Faster: Efficient One-Step Generative Modeling via MeanFlow on Rectified Trajectories}, 
+      author={Xinxi Zhang and Shiwei Tan and Quang Nguyen and Quan Dao and Ligong Han and Xiaoxiao He and Tunyu Zhang and Alen Mrdovic and Dimitris Metaxas},
+      year={2025},
+      eprint={2511.23342},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2511.23342}, 
 }
-``` -->
+```
