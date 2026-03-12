@@ -1,19 +1,19 @@
-<h1 align="center"> Straighter and Faster: <br> Efficient One-Step Generative Modeling 
-via Meanflow on Rectified Trajectories
+<h1 align="center"> Overcoming the Curvature Bottleneck in MeanFlow
 </h1>
 
 <div align="center">
-    <a href="https://xinxi-zhang.github.io/WEB_XINXI/" target="_blank">Xinxi&nbsp;Zhang</a><sup>1*</sup> &ensp; <b>&middot;</b> &ensp;
-    <a href="https://scholar.google.com/citations?user=XUsD3_kAAAAJ&amp;hl" target="_blank">Shiwei&nbsp;Tan</a><sup>1*</sup> &ensp; <b>&middot;</b> &ensp;
-    <a href="https://scholar.google.com/citations?user=SUuo7U4AAAAJ&amp;hl=en" target="_blank">Quang&nbsp;Nguyen</a><sup>1</sup> &ensp; <b>&middot;</b> &ensp;
-    <a href="https://quandao10.github.io/" target="_blank">Quan&nbsp;Dao</a><sup>1</sup> &ensp; <b>&middot;</b> &ensp;
-    <a href="https://phymhan.github.io/" target="_blank">Ligong&nbsp;Han</a><sup>2</sup> &ensp; <b>&middot;</b> &ensp;
-    <a href="https://hexiaoxiao-cs.github.io/" target="_blank">Xiaoxiao&nbsp;He</a><sup>1</sup> &ensp; <b>&middot;</b> &ensp;
-    <a href="https://scholar.google.com/citations?user=y3st15YAAAAJ&amp;hl=en" target="_blank">Tunyu&nbsp;Zhang</a><sup>1</sup> &ensp; <b>&middot;</b> &ensp;
-    <a href="https://openreview.net/profile?id=~Alen_Mrdovic1" target="_blank">Alen&nbsp;Mrdovic</a><sup>1</sup> &ensp; <b>&middot;</b> &ensp;
-    <a href="https://people.cs.rutgers.edu/~dnm/" target="_blank">Dimitris&nbsp;Metaxas</a><sup>1</sup>
+    <a href="https://xinxi-zhang.github.io/WEB_XINXI/" target="_blank">Xinxi&nbsp;Zhang</a><sup>*</sup> &ensp; <b>&middot;</b> &ensp;
+    <a href="https://scholar.google.com/citations?user=XUsD3_kAAAAJ&amp;hl" target="_blank">Shiwei&nbsp;Tan</a><sup>*</sup> &ensp; <b>&middot;</b> &ensp;
+    <a href="https://scholar.google.com/citations?user=SUuo7U4AAAAJ&amp;hl=en" target="_blank">Quang&nbsp;Nguyen</a> &ensp; <b>&middot;</b> &ensp;
+    <a href="https://quandao10.github.io/" target="_blank">Quan&nbsp;Dao</a> &ensp; <b>&middot;</b> &ensp;
+    <a href="https://phymhan.github.io/" target="_blank">Ligong&nbsp;Han</a>&ensp; <b>&middot;</b> &ensp;
+    <a href="https://hexiaoxiao-cs.github.io/" target="_blank">Xiaoxiao&nbsp;He</a> &ensp; <b>&middot;</b> &ensp;
+    <a href="https://scholar.google.com/citations?user=y3st15YAAAAJ&amp;hl=en" target="_blank">Tunyu&nbsp;Zhang</a> &ensp; <b>&middot;</b> &ensp;
+    <a href="https://scholar.google.com/citations?user=pTTEiHUAAAAJ&hl=en" target="_blank">Chengzhi&nbsp;Mao</a> &ensp; <b>&middot;</b> &ensp;
+    <a href="https://scholar.google.com/citations?user=a7VNhCIAAAAJ&hl=en" target="_blank">Dimitris&nbsp;Metaxas</a> &ensp; <b>&middot;</b> &ensp;
+    <a href="https://scholar.google.com/citations?user=8MQT8skAAAAJ" target="_blank">Vladimir&nbsp;Pavlovic</a>
   <br>
-  <sup>1</sup> Rutgers University &emsp; <sup>2</sup> Red Hat &emsp; <br>
+  Rutgers University &emsp; <br>
   <sup>*</sup>Equal contribution &emsp; <br>
 </div>
 
@@ -23,7 +23,7 @@ via Meanflow on Rectified Trajectories
 <div align="center">
 <img width="800" alt="Image" src="docs/header.jpg" />
 </div>
-<b>Summary</b>: Re-MeanFlow enables efficient one-step generative modeling by learning mean velocities along rectified trajectories, achieving state-of-the-art one-step FID of 3.03 on ImageNet 512.  <br> <br>
+<b>Summary</b>: Re-MeanFlow enables efficient one-step generative modeling by learning mean velocities on rectified, straighter trajectories, smoothing the optimization landscape and achieving state-of-the-art one-step generation on ImageNet.  <br> <br>
 
 We provide a minimalist codebase for Imagenet 64 (pixel space) and 512 (latent space) in this repo, initialized from [EDM2-S](https://github.com/NVlabs/edm2). For simplicity, we will only include 512×512 examples when they are nearly identical to the 64×64 setup.
 
@@ -50,7 +50,7 @@ python3 dataset_tools.py convert --source=[YOUR_DATA_PATH]/imagenet/raw/train \
     --dest=[YOUR_DATA_PATH]/imagenet/512/real --resolution=512x512 --transform=center-crop-dhariwal
 ```
 
-### 3. Generate Reflow Couplings
+### 3. Generate Rectifid Couplings
 We first create a JSON file listing all images to be synthesized. This can be done either by (i) sampling classes at random or (ii) matching the ImageNet class distribution using the `dataset.json` from step 2. In the paper, we use the latter.
 
 ```bash
