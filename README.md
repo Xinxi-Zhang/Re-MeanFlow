@@ -46,7 +46,7 @@ python3 tools/download_dataset.py --path [YOUR_DATA_PATH]/imagenet \
 
 Preprocess:
 ```bash
-python3 dataset_tools.py convert --source=[YOUR_DATA_PATH]/imagenet/raw/train \
+python3 tools/dataset_tools.py convert --source=[YOUR_DATA_PATH]/imagenet/raw/train \
     --dest=[YOUR_DATA_PATH]/imagenet/512/real --resolution=512x512 --transform=center-crop-dhariwal
 ```
 
@@ -134,10 +134,10 @@ We thank [Haizhou Shi](https://haizhou-shi.github.io/) for many discussions that
 
 ## BibTeX
 ```bibtex
-@misc{zhang2025flowstraighterfasterefficient,
-      title={Flow Straighter and Faster: Efficient One-Step Generative Modeling via MeanFlow on Rectified Trajectories}, 
-      author={Xinxi Zhang and Shiwei Tan and Quang Nguyen and Quan Dao and Ligong Han and Xiaoxiao He and Tunyu Zhang and Alen Mrdovic and Dimitris Metaxas},
-      year={2025},
+@misc{zhang2026overcomingcurvaturebottleneckmeanflow,
+      title={Overcoming the Curvature Bottleneck in MeanFlow}, 
+      author={Xinxi Zhang and Shiwei Tan and Quang Nguyen and Quan Dao and Ligong Han and Xiaoxiao He and Tunyu Zhang and Chengzhi Mao and Dimitris Metaxas and Vladimir Pavlovic},
+      year={2026},
       eprint={2511.23342},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
