@@ -17,7 +17,7 @@
   <sup>*</sup>Equal contribution &emsp; <br>
 </div>
 
-<h3 align="center">[<a href="https://arxiv.org/abs/2511.23342">arXiv</a>]</h3>
+<h3 align="center">[<a href="https://arxiv.org/abs/2511.23342">arXiv</a>] &middot; [<a href="https://xinxi-zhang.github.io/WEB_REMF/">Project Page</a>]</h3>
 <br>
 
 <div align="center">
